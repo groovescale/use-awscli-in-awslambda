@@ -9,8 +9,8 @@ You only need the docker host to rebuild a new version of the AWS CLI.  If you j
 
 Besides docker, the other main prerequisite is the ability to shared files.  Two configurations known to work are:
 
-    - A docker-machine provisioned VM running in the (default) virtualbox hypervisor
-    - An Ubuntu Linux running docker
+  - A docker-machine provisioned VM running in the (default) virtualbox hypervisor
+  - An Ubuntu Linux running docker
 
 
 # Instructions:
@@ -47,6 +47,6 @@ The Amazon-supported docker images for amazon-linux are all newer than 2016-03: 
 
 This third party has the 2016-03 version of amazon linux, which is what I used:
 
-    https://hub.docker.com/r/ambakshi/amazon-linux/
+  - https://hub.docker.com/r/ambakshi/amazon-linux/
 
 The scripts probably run on a wide variety of linux distributions, but this project is only tested against the referenced docker image.
