@@ -13,7 +13,22 @@ Besides docker, the other main prerequisite is the ability to shared files.  Two
   - An Ubuntu Linux running docker
 
 
-# Instructions:
+# Instructions for using the CLI
+
+Merge the contents of use-awscli-in-awslambda.zip to some directory inside your AWS lambda function zip file.  The main script "aws" is in the root directory of use-awscli-in-awslambda.zip.  AWS Lambda extracts your archive to the read-only path /var/task.  If you add to the top directory of your lambda zip, then "aws" will appear at:
+
+    /var/task/aws
+
+You can use this snippet of code to test that you can call the CLI from a python AWS lambda function:
+
+    import subprocess
+    import os
+    adirBase = os.path.dirname(os.path.realpath(__file__))
+    subprocess.check_call([
+        os.path.join(adirBase,"aws"), "help"
+    ])
+
+# Instructions for rebuilding the CLI package
 
 Before running, make sure you can:
 
@@ -26,7 +41,6 @@ If this works, build:
 The output will be written to:
 
     use-awscli-in-awslambda.zip
-
 
 # Background
 
