@@ -6,4 +6,4 @@ docker run -it \
   -v $adirBase:$adirBase \
   awscli-in-lambda:dev \
   bash $adirBase/indir.sh $adirBase \
-  bash $adirBase/make_awscli.sh $adirBase/awscli_venv.zip
+  bash $adirBase/make_awscli.sh $adirBase/use-awscli-in-awslambda.zip

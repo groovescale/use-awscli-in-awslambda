@@ -3,5 +3,5 @@ all:
 	bash $(shell pwd)/buildrun.sh
 
 clean:
-	rm -f awscli_venv.zip
+	rm -f use-awscli-in-awslambda.zip
 
